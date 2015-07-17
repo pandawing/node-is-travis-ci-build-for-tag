@@ -37,19 +37,19 @@ $ npm install --global is-travis-ci-build-for-tag
 ```
 ```
 $ is-travis-ci-build-for-tag --help
+  Check if your code is running on Travis-CI build for a tag.
 
   Usage
-    is-travis-ci-build-for-tag [input]
+    $ is-travis-ci-build-for-tag
 
-  Example
-    is-travis-ci-build-for-tag
-    unicorns & rainbows
+  Examples
+    // on your local computer
+    $ is-travis-ci-build-for-tag
+    This is not Travis-CI build for a tag. //=> exit code: 1
 
-    is-travis-ci-build-for-tag ponies
-    ponies & rainbows
-
-  Options
-    --foo  Lorem ipsum. Default: false
+    // on Travis-CI build for a tag
+    $ is-travis-ci-build-for-tag
+    (no output) //=> exit code: 0
 ```
 
 
