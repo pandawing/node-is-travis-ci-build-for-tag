@@ -4,6 +4,8 @@
 
 > Check if your code is running on [Travis-CI build for a tag](http://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
 
+Check [is-travis-ci-build](https://github.com/pandawing/node-is-travis-ci-build), not for a tag.
+
 This is based on [is-travis](https://github.com/sindresorhus/is-travis).
 
 
