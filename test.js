@@ -1,9 +1,10 @@
 'use strict';
 /*eslint no-console:0*/
-console.log(process.env.CI);
-console.log(process.env.TRAVIS);
-console.log(process.env.TRAVIS_TAG);
-console.log(process.env.hasOwnProperty('TRAVIS_TAG'));
+console.log('process.env.CI: ' + process.env.CI);
+console.log('process.env.TRAVIS: ' + process.env.TRAVIS);
+console.log('process.env.TRAVIS_TAG: ' + process.env.TRAVIS_TAG);
+console.log('process.env.TRAVIS_TAG === "": ' + (process.env.TRAVIS_TAG === ''));
+console.log('hasOwnProperty("TRAVIS_TAG"): ' + process.env.hasOwnProperty('TRAVIS_TAG'));
 var assert = require('power-assert');
 var isTravisCiBuildForTag = require('./');
 
