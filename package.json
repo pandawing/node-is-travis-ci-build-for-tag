@@ -1,6 +1,6 @@
 {
   "name": "is-travis-ci-build-for-tag",
-  "description": "My spectacular module",
+  "description": "Check if your code is running on Travis-CI build for a tag.",
   "version": "0.0.0",
   "author": {
     "name": "sanemat",
@@ -31,12 +31,14 @@
     "cli.js"
   ],
   "keywords": [
-    "",
+    "ci",
     "cli",
-    "cli-app"
+    "cli-app",
+    "travis",
+    "travis-ci"
   ],
   "license": "MIT",
-  "repository": "sanemat/is-travis-ci-build-for-tag",
+  "repository": "pandawing/node-is-travis-ci-build-for-tag",
   "scripts": {
     "changelog": "touch changelog.md && conventional-changelog -i changelog.md --overwrite --preset angular",
     "david": "david update",
