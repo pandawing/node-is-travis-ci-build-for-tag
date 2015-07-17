@@ -1,10 +1,18 @@
 'use strict';
+
 var assert = require('power-assert');
 var isTravisCiBuildForTag = require('./');
 
-it('should ', function () {
-  assert.strictEqual(isTravisCiBuildForTag('unicorns'), 'unicorns & rainbows');
+it('should not travis-ci build for tag', function () {
+  delete process.env.TRAVIS_TAG;
+  delete process.env.TRAVIS;
+  delete process.env.CI;
+  assert.equal(isTravisCiBuildForTag(), false);
 });
-it('should not ', function () {
-  assert.strictEqual(isTravisCiBuildForTag('unicorns'), 'unicorns & wrong');
+
+it('should travis-ci build for tag', function () {
+  process.env.TRAVIS_TAG = 1;
+  process.env.TRAVIS = 1;
+  process.env.CI = 1;
+  assert.equal(isTravisCiBuildForTag(), true);
 });
