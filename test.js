@@ -10,6 +10,20 @@ it('should not travis-ci build for tag', function () {
   assert.equal(isTravisCiBuildForTag(), false);
 });
 
+it('treat empty value as false', function () {
+  process.env.TRAVIS_TAG = '';
+  process.env.TRAVIS = 1;
+  process.env.CI = 1;
+  assert.equal(isTravisCiBuildForTag(), false);
+});
+
+it('treat falsy value as false', function () {
+  process.env.TRAVIS_TAG = 'false';
+  process.env.TRAVIS = 1;
+  process.env.CI = 1;
+  assert.equal(isTravisCiBuildForTag(), false);
+});
+
 it('should travis-ci build for tag', function () {
   process.env.TRAVIS_TAG = 1;
   process.env.TRAVIS = 1;
